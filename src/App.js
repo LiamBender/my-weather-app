@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import SearchFilter from "./components/SearchFilter";
+import Weather from "./components/Weather";
 
 const handleOnSearchChange = (searchData) => {
   console.log(searchData);
@@ -11,6 +12,7 @@ function App() {
   return (
     <Container>
       <SearchFilter onSearchChange={handleOnSearchChange} />
+      <Weather />
     </Container>
   );
 }
