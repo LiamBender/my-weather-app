@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+
+import SearchFilter from "./components/SearchFilter";
+
+const handleOnSearchChange = (searchData) => {
+  console.log(searchData);
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <SearchFilter onSearchChange={handleOnSearchChange} />
+    </Container>
   );
 }
+// GEO API https://rapidapi.com/wirefreethought/api/geodb-cities
+// Weather API https://home.openweathermap.org/api_keys
+
+const Container = styled.div`
+  max-width: 1080px;
+  margin: 20px auto;
+`;
 
 export default App;
