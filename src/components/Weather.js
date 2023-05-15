@@ -6,7 +6,12 @@ const Weather = () => {
         <Container>
             <InnerContainer>
                 <CityText>City Placeholder</CityText>
+                <WeatherContainer>
                 <WeatherText>Weather Placeholder</WeatherText>
+                <TemperatureText> Temperature Placeholder</TemperatureText>
+                </WeatherContainer>
+                <DetailsContainer>
+                </DetailsContainer>
                 <WeatherImage src=""/>
             </InnerContainer>
         </Container>
@@ -14,20 +19,28 @@ const Weather = () => {
 }
 
 const Container = styled.div`
-display: flex;
-justify-content: center;
-
 `;
 const InnerContainer = styled.div`
-background-color: brown;
-padding-inline: 50px;
-margin-top: 25px;
+border-radius: 10px;
+background-color: gray;
 `;
-const CityText = styled.h1`
-margin-bottom: 50px;
+const WeatherContainer = styled.div`
+display: flex;
+flex-direction: column;
+`
+const DetailsContainer = styled.div``
+const CityText = styled.h2`
+font-weight: bold;
 text-align: center;
 `
-const WeatherText = styled.p``
-const WeatherImage = styled.img``
+const WeatherText = styled.p`
+text-align: left;
+margin: 0;
+`
+const TemperatureText = styled.p`
+margin: 0;
+`
+const WeatherImage = styled.img`
+`
 
 export default Weather;
