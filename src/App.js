@@ -18,12 +18,14 @@ function App() {
 
   return (
     <Container>
-      <Search onCityInfoChange={handleCityInfoChange} />
-        {latitude && longitude && (
-        <Weather latitude={latitude} longitude={longitude} city={city} />
-      )}
+      <SearchContainer>
+        <Search onCityInfoChange={handleCityInfoChange} />
+      </SearchContainer>
       {latitude && longitude && (
-        <Forecast latitude={latitude} longitude={longitude} city={city} />
+        <InfoContainer>
+          <Weather latitude={latitude} longitude={longitude} city={city} />
+          <Forecast latitude={latitude} longitude={longitude} />
+        </InfoContainer>
       )}
     </Container>
   );
@@ -32,8 +34,17 @@ function App() {
 // Weather API https://home.openweathermap.org/api_keys
 
 const Container = styled.div`
-  max-width: 1080px;
   margin: 20px auto;
+`;
+const InfoContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  color: white;
+`;
+const SearchContainer = styled.div`
+display: flex;
+justify-content: center;
+margin-bottom: 25px;
 `;
 
 export default App;

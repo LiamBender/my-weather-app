@@ -25,19 +25,33 @@ const Weather = ({ latitude, longitude, city }) => {
 
   return (
     <Container>
+        <TodayHeader>Today's Weather</TodayHeader>
       {weatherData ? (
         <InnerContainer>
-          <CityText>{city},  {weatherData.sys.country}</CityText>
+          <CityText>
+            {city}, {weatherData.sys.country}
+          </CityText>
           <WeatherContainer>
-            <WeatherInfo>Weather: {weatherData.weather[0].description}</WeatherInfo>
-            <WeatherInfo>Temperature: {Math.round(weatherData.main.temp)}°C</WeatherInfo>
+            <WeatherInfo>
+              Weather: {weatherData.weather[0].description}
+            </WeatherInfo>
+            <WeatherInfo>
+              Temperature: {Math.round(weatherData.main.temp)}°C
+            </WeatherInfo>
           </WeatherContainer>
           <DetailsContainer>
-          <WeatherInfo>Feels like: {Math.round(weatherData.main.feels_like)}°C</WeatherInfo>
-          <WeatherInfo>Wind: {weatherData.wind.speed} m/s</WeatherInfo>
-          <WeatherInfo>Humidity: {weatherData.main.humidity}%</WeatherInfo>
-          <WeatherInfo>Pressure: {weatherData.main.pressure} hPa</WeatherInfo>
-          <WeatherInfo>Temperature Max: {Math.round(weatherData.main.temp_max)}°C</WeatherInfo> <WeatherInfo>Temperature Min: {Math.round(weatherData.main.temp_min)}°C</WeatherInfo>
+            <WeatherInfo>
+              Feels like: {Math.round(weatherData.main.feels_like)}°C
+            </WeatherInfo>
+            <WeatherInfo>Wind: {weatherData.wind.speed} m/s</WeatherInfo>
+            <WeatherInfo>Humidity: {weatherData.main.humidity}%</WeatherInfo>
+            <WeatherInfo>Pressure: {weatherData.main.pressure} hPa</WeatherInfo>
+            <WeatherInfo>
+              Temperature Max: {Math.round(weatherData.main.temp_max)}°C
+            </WeatherInfo>{" "}
+            <WeatherInfo>
+              Temperature Min: {Math.round(weatherData.main.temp_min)}°C
+            </WeatherInfo>
           </DetailsContainer>
           <WeatherImage src="" />
         </InnerContainer>
@@ -49,24 +63,16 @@ const Weather = ({ latitude, longitude, city }) => {
 };
 
 const Container = styled.div`
+  border-radius: 10px;
+  background-color: gray;
+  padding-inline: 15px;
 `;
-const InnerContainer = styled.div`
-border-radius: 10px;
-background-color: gray;
-`;
-const WeatherContainer = styled.div`
-display: flex;
-flex-direction: column;
-`
-const DetailsContainer = styled.div``
-const CityText = styled.h2`
-font-weight: bold;
-text-align: center;
-`
-const WeatherInfo = styled.p`
-text-align: left;
-margin: 0;
-`
-const WeatherImage = styled.img``
+const InnerContainer = styled.div``;
+const WeatherContainer = styled.div``;
+const DetailsContainer = styled.div``;
+const TodayHeader = styled.h2``
+const CityText = styled.h3``;
+const WeatherInfo = styled.p``;
+const WeatherImage = styled.img``;
 
 export default Weather;
