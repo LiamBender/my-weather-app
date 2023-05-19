@@ -73,19 +73,32 @@ const Forecast = ({ latitude, longitude }) => {
 
 const Container = styled.div`
   border-radius: 10px;
-  background-color: gray;
   padding-inline: 15px;
   margin-left: 10px;
+
+  background: rgba(255, 255, 255, 0.33);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+
+@media screen and (max-width: 1372px) {
+    margin-left: 0px;
+}
 `;
 const InnerContainer = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media screen and (max-width: 728px) {
+    display: block;
+}
 `;
 const ForecastContainer = styled.div`
   margin-inline: 5px;
 `;
 const ForecastHeader = styled.h2``;
 const DaysHeader = styled.h3``;
-const WeatherInfo = styled.p``;
+const WeatherInfo = styled.p`
+`;
 
 export default Forecast;

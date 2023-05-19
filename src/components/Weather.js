@@ -64,8 +64,12 @@ const Weather = ({ latitude, longitude, city }) => {
 
 const Container = styled.div`
   border-radius: 10px;
-  background-color: gray;
   padding-inline: 15px;
+
+  background: rgba(255, 255, 255, 0.33);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
 `;
 const InnerContainer = styled.div``;
 const WeatherContainer = styled.div``;
