@@ -9,7 +9,7 @@ A web application that uses two APIs to get the weather conditions of a city.
 - Input that lets the user type in a city name.
 - Information about the weather conditions of the city.
 
-#### Future features
+### Future features
 - Better UI
 
 ### Built with
@@ -21,9 +21,8 @@ A web application that uses two APIs to get the weather conditions of a city.
 - [OpenWeather API](https://api.openweathermap.org/)
 - [GeoDB Cities API](http://geodb-cities-api.wirefreethought.com/)
 
-## Usage
 
-#### Installation
+## Installation
 1. To run this web application you need to first download [Node.js](https://nodejs.org/en) and npm which is within the installer.
    After the installation is complete use this code in the console/terminal to verify that it is installed. It should display the version numbers for Node.js and npm respectively.
    ```console
