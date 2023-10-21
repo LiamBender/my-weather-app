@@ -47,5 +47,5 @@ A web application that uses two APIs to get the weather conditions of a city.
    ```console
    npm start
    ```
-   Since everything is installed and downloaded, in order to start the project you only have to follow step 7.
+   Since everything is installed and downloaded, in order to start the project you only have to follow the final step.
 
