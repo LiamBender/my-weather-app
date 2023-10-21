@@ -23,7 +23,7 @@ A web application that uses two APIs to get the weather conditions of a city.
   
 #### Installation
 1. To run this web application you need to first download [Node.js](https://nodejs.org/en) and npm which is within the installer.
-   After installation is complete use this code in the console/terminal to verify that it is installed. It should display the version numbers Node.js and npm respectively.
+   After the installation is complete use this code in the console/terminal to verify that it is installed. It should display the version numbers Node.js and npm respectively.
    ```console
    node -v npm -v
    ```
