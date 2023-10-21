@@ -15,9 +15,9 @@ A web application that uses two APIs to get the weather conditions of a city.
 ### Built with
 - HTML
 - CSS
-- Styled-components (CSS library)
+- [Styled-components](https://styled-components.com/)
 - Javascript
-- React.js (Framework)
+- React.js
 - [OpenWeather API](https://api.openweathermap.org/)
 - [GeoDB Cities API](http://geodb-cities-api.wirefreethought.com/)
 
